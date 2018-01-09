@@ -1,0 +1,837 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo Comparateur de forfaits - FORFAIT SANS ENGAGEMENT</title>
+<!--        <link rel="stylesheet" href="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/styles/build/base.css">-->
+  <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body>
+<!--        <script src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/js/build/cdiscount_front.js"></script>-->
+
+        <div id="contentComparateur">
+            <main id="sub_part_comparator">
+                <header>
+                    <h2 class="h2_mob">Comparateur Forfaits mobiles</h2>
+                    <h2 class="h2_bur">Comparateur Forfaits mobiles</h2> <br>
+                    <div class="header_filtre">
+
+                        <!-- FILTRE-POUR-MOBILE -->
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/fse" id="filterFormMobile" class="filtre content_manager_form">
+                            <p class="pmob">Vos besoins mensuels</p>
+                            <br>
+                            <p class="prix_max">
+                                <span class="min_mob">Prix maximum</span>
+                                <span class="max_mob">20 €</span>
+                            </p>
+                            <input type="range" id="filterPriceMobile" name="price" min="1" max="100" value="20" style="background-size: 19.1919% 100%;">
+                            <p class="prix_max">
+                                <span class="min_mob">Data web minimum</span>
+                                <span class="max_mob">5 Go</span>
+                            </p>
+                            <input type="range" id="filterDataMobile" name="internetCapacity" min="1" max="100" value="5" style="background-size: 4.0404% 100%;">
+                            <p class="prix_max">
+                                <span class="min_mob">Appels minimum</span>
+                                <span class="max_mob">2 h</span>
+                            </p>
+                            <input type="range" id="filterCallMobile" name="callTime" min="1" max="20" value="2" style="background-size: 5.26316% 100%;">
+                            <div class="hidden" id="advancedResearchMobile">
+                                <p class="prix_max">
+                                    <select id="operator" name="operator" class="selec"><option value="">Opérateurs</option><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                                </p>
+                                <p class="prix_max">
+                                    <select id="options" name="options[]" class="selec" multiple="multiple"><option value="5">5G</option><option value="1">International</option><option value="2">Musique illimitée</option><option value="7">SFR Play</option><option value="8">SFR Sport</option><option value="3">Vidéo</option><option value="6">Wifi</option></select>
+                                </p>
+                                <p class="prix_max">
+                                    <select id="norme" name="norme" class="selec"><option value="10">3G</option><option value="2">4G</option><option value="9">4G</option><option value="4">4G+</option><option value="11">ADSL</option><option value="12">ADSL+</option><option value="13">Fibre</option><option value="5">H+</option></select>
+                                </p>
+                            </div>
+
+                            <br> <br>
+
+                            <!--  LE-LIEN-FILTRE-DU-HEADER -->
+                            <div class="lien-filtre">
+                                <a href="#" onclick="document.querySelector('#advancedResearchMobile').classList.toggle('hidden'); this.classList.toggle('hidden'); return false;">
+                                    &gt;&gt;Recherche avancée
+                                </a>
+                                <br> <br>
+                                <button class="comparer">Comparer</button>
+                            </div>
+                            <input type="hidden" id="engagement" name="engagement"><input type="hidden" id="type" name="type" value="Forfait sans engagement">
+                        </form>
+
+                        <!-- FILTRE-POUR-BUREAU -->
+                        <p class="p_bur">Vos besoins mensuels</p>
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/fse" id="filterFormDesktop" class="content_manager_form">
+                            <div class="filtre_bur">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Prix maximum</span>
+                                        <span class="max maxi">20 €</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterPriceDesktop" name="price" min="1" max="100" value="20" style="background-size: 19.1919% 100%;">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Data web</span>
+                                        <span class="max">5 Go</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterDataDesktop" name="internetCapacity" min="1" max="100" value="5" style="background-size: 4.0404% 100%;">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Appels</span>
+                                        <span class="max">2 h</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterCallDesktop" name="callTime" min="1" max="20" value="2" style="background-size: 5.26316% 100%;">
+                                </div>
+                                <div class="filtre_bur_lien">
+                                    <span>5 forfaits réferencés</span>
+                                    <button class="comparer">Comparer</button>
+                                </div>
+                                <div class="lien-filtre">
+                                    <a href="#" class="recherche" onclick="document.querySelector('#advancedResearchDesktop').classList.toggle('hidden'); this.classList.toggle('hidden'); return false;">
+                                        &gt;&gt;Recherche avancée
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="filtre_bur hidden" id="advancedResearchDesktop">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="operator" name="operator" class="selec1h"><option value="">Opérateurs</option><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="options" name="options[]" class="selec1h" multiple="multiple"><option value="5">5G</option><option value="1">International</option><option value="2">Musique illimitée</option><option value="7">SFR Play</option><option value="8">SFR Sport</option><option value="3">Vidéo</option><option value="6">Wifi</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="norme" name="norme" class="selec1h"><option value="10">3G</option><option value="2">4G</option><option value="9">4G</option><option value="4">4G+</option><option value="11">ADSL</option><option value="12">ADSL+</option><option value="13">Fibre</option><option value="5">H+</option></select>
+                                    </p>
+                                </div>
+                            </div>
+                            <input type="hidden" id="engagement" name="engagement"><input type="hidden" id="type" name="type" value="Forfait sans engagement">
+                        </form>
+                    </div>
+                </header>
+
+                <!-- BLOC-BANIERE-->
+                <div class="pubmob">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-fse"> <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/76b165352060a5453f8339baa1ca196e.jpeg" alt="image-pub"></a>
+                </div>
+                <div class="pub_desktop">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-fse"> <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/6d379452dcb8b7945cd17d2e908fbff5.jpeg" alt="image-pub"></a>
+                </div>
+
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>RED Boost 30GO</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                                PROMO A VIE
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/8fd27c4f531792c104f17ab4aa4c89e2.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                30 Go
+                                en 4G
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>10<sup>,00</sup> €</strong>
+                                <p>Par mois au lieu de 20,00 €</p>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Test pack 3</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                                PROMO
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+
+                                4 h
+
+
+                                / mois
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                500
+                                SMS /
+                                100
+                                MMS
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                10 Go
+                                en 4G
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/9945bab00e66da43bf1aad7cd0354bbf.png" title="Europe">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/7ba16a1737cbd280b4199e2a8a43d230.png" title="SFR sport">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>15<sup>,99</sup> €</strong>
+                                <p>Par mois au lieu de 19,99 €</p>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Deuxieme test FSE</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/a699c3afba83b6f022c302d8615196e8.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+
+                                2 h
+
+
+                                / mois
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                illimité en 4G
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>8<sup>,90</sup> €</strong>
+                                <p>Par mois au lieu de 10,90 €</p>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>FSE 2</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/8fd27c4f531792c104f17ab4aa4c89e2.png">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                illimité en 4G
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>15<sup>,99</sup> €</strong>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Pack FSE 1</strong>
+                            <p>
+                                12 mois
+                            </p>
+                            <span>
+                                PROMO
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>SMS/MMS</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                illimité en 4G+
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/9945bab00e66da43bf1aad7cd0354bbf.png" title="Europe">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>15<sup>,99</sup> €</strong>
+                                <p>Par mois au lieu de 19,99 €</p>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+
+                <!-- FORFAIT-HOME-BUREAU -->
+                <div class="forfait_mobil_bur">
+                    <table>
+                        <tbody><tr>
+                            <td class="forf">
+                                <span>Forfaits</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=name_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=name_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Opérateur</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=operator_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=operator_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Appels</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=call_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=call_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>SMS/MMS</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=sms_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=sms_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Internet</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=capacity_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=capacity_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="forf">
+                                <span>Options</span>
+                            </td>
+                            <td class="autr">
+                                <span>Prix</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=price_asc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/fse?order=name_desc&amp;price=20&amp;internetCapacity=5&amp;callTime=2&amp;type=Forfait%20sans%20engagement">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="forf">
+                                <span>en savoir plus</span>
+                            </td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>RED Boost 30GO</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO A VIE
+                                    </p>
+                                </td>
+                                <td class="operateur">
+<!--                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/8fd27c4f531792c104f17ab4aa4c89e2.png">-->
+                               <img src="grosse.jpeg" alt="">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        30 Go
+                                        en 4G
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>10<sup>,00</sup> €</strong>
+                                        <p>Par mois au lieu de 20,00 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Test pack 3</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+<!--                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png">-->
+                               <img src="img/baniere.png" alt="">
+                                </td>
+                                <td>
+                                    <span>
+
+                                        4 h
+
+
+                                        / mois
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        500
+                                        SMS /
+                                        100
+                                        MMS
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        10 Go
+                                        en 4G
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/9945bab00e66da43bf1aad7cd0354bbf.png" title="Europe">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/7ba16a1737cbd280b4199e2a8a43d230.png" title="SFR sport">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>15<sup>,99</sup> €</strong>
+                                        <p>Par mois au lieu de 19,99 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Deuxieme test FSE</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/a699c3afba83b6f022c302d8615196e8.png">
+                                </td>
+                                <td>
+                                    <span>
+
+                                        2 h
+
+
+                                        / mois
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité en 4G
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>8<sup>,90</sup> €</strong>
+                                        <p>Par mois au lieu de 10,90 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>FSE 2</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                    </p>
+                                </td>
+                                <td class="operateur">
+<!--                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/8fd27c4f531792c104f17ab4aa4c89e2.png">-->
+                               <img src="img/lapostelogo.png" alt="">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité en 4G
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>15<sup>,99</sup> €</strong>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Pack FSE 1</strong>
+                                    <br>
+                                    <p class="engag">
+                                        12 mois
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+<!--                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg">-->
+                                <img src="img/pub_produit.png" alt="">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité en 4G+
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/9945bab00e66da43bf1aad7cd0354bbf.png" title="Europe">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>15<sup>,99</sup> €</strong>
+                                        <p>Par mois au lieu de 19,99 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                    <div class="pagination_bloc">
+                        <span>Page 1 / 1</span>
+                        <div class="pagination">
+                        </div>
+                    </div>
+
+
+                </div>
+                <script type="text/javascript">
+                    priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+                    priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');
+                    priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');
+
+                    dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');
+                    dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');
+                    dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');
+
+                    callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');
+                    callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');
+                    callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [
+                        {
+                            operator    : 'equal',
+                            opposition  : callDesktopRange.max,
+                            replacement : 'illimité',
+                            addUnit     : false
+                        }
+                    ]);
+
+                    priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+                    priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+                    priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');
+
+                    dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');
+                    dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');
+                    dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');
+
+                    callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');
+                    callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');
+                    callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [
+                        {
+                            operator    : 'equal',
+                            opposition  : callMobileRange.max,
+                            replacement : 'illimité',
+                            addUnit     : false
+                        }
+                    ]);
+                </script>
+            </main>
+        </div>
+
+        <script type="text/javascript">
+            contentM = new ContentManager(
+                document.querySelector('#contentComparateur'),     //element dans lequel le contenu serra ajouté
+                'https://cdiscount-dvpt.kreatec.fr/comparator/fse'
+            )
+        </script>
+
+        <script>
+            <br>        priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>        priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>        priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>        dataDesktopRange = document.querySelector('#sub_part_comparator #filterDataDesktop');<br>        dataDesktopLabel = dataDesktopRange.parentNode.querySelector('.max');<br>        dataDesktopRange.autoRange = new InputRange(dataDesktopRange, dataDesktopLabel, 'Go');<br><br>        callDesktopRange = document.querySelector('#sub_part_comparator #filterCallDesktop');<br>        callDesktopLabel = callDesktopRange.parentNode.querySelector('.max');<br>        callDesktopRange.autoRange = new InputRange(callDesktopRange, callDesktopLabel, 'h', [<br>            {<br>                operator    : 'equal',<br>                opposition  : callDesktopRange.max,<br>                replacement : 'illimité',<br>                addUnit     : false<br>            }<br>        ]);<br><br>        priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>        priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>        priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br><br>        dataMobileRange = document.querySelector('#sub_part_comparator #filterDataMobile');<br>        dataMobileLabel = dataMobileRange.previousElementSibling.querySelector('.max_mob');<br>        dataMobileRange.autoRange = new InputRange(dataMobileRange, dataMobileLabel, 'Go');<br><br>        callMobileRange = document.querySelector('#sub_part_comparator #filterCallMobile');<br>        callMobileLabel = callMobileRange.previousElementSibling.querySelector('.max_mob');<br>        callMobileRange.autoRange = new InputRange(callMobileRange, callMobileLabel, 'h', [<br>            {<br>                operator    : 'equal',<br>                opposition  : callMobileRange.max,<br>                replacement : 'illimité',<br>  
+    addUnit     : false<br>            }<br>        ]);<br>    </script>
+    </body>
+</html>

@@ -1,0 +1,490 @@
+<html>
+   <head>
+    <meta charset="utf-8">
+
+    <title>Demo Comparateur de forfaits - COMPARATEUR BOX</title>
+<!--    <link rel="stylesheet" href="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/styles/build/base.css">-->
+   <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+<!--        <script src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/js/build/cdiscount_front.js"></script>-->
+        <div id="contentComparateur">
+            <main id="sub_part_comparator">
+                <header>
+                    <h2 class="h2_mob">Comparateur d'abonnements internet Box, ADSL, Fibre</h2>
+                    <h2 class="h2_bur">Comparateur d'abonnements internet Box, ADSL, Fibre</h2> <br>
+                    <div class="header_filtre">
+
+                        <!--          FILTRE-POUR-MOBILE-->
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/box" id="filterFormMobile" class="filtre content_manager_form">
+                            <p class="pmob">Vos besoins mensuels</p>
+                            <br>
+                            <p class="prix_max">
+                                <span class="min_mob">Prix maximum</span>
+                                <span class="max_mob">20 €</span>
+                            </p>
+                            <input type="range" id="filterPriceMobile" name="price" min="1" max="100" value="20" style="background-size: 19.1919% 100%;">
+                            <p class="prix_max">
+                                <select id="operator" name="operator" class="selec"><option value="">Opérateurs</option><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                            </p>
+                            <p class="prix_max">
+                                <select id="options" name="options[]" class="selec" multiple="multiple"><option value="5">5G</option><option value="1">International</option><option value="2">Musique illimitée</option><option value="7">SFR Play</option><option value="8">SFR Sport</option><option value="3">Vidéo</option><option value="6">Wifi</option></select>
+                            </p>
+                            <div class="hidden" id="advancedResearchMobile">
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                            </div>
+                            
+                            <br>
+
+                            <!--  LE-LIEN-FILTRE-DU-HEADER -->
+                            <div class="lien-filtre">
+                                <a href="#" onclick="document.querySelector('#advancedResearchMobile').classList.toggle('hidden'); return false;">
+                                    &gt;&gt;Recherche avancée
+                                </a>
+                                <br> <br>
+                                <button class="comparer">Comparer</button>
+                            </div>
+                            <input type="hidden" id="type" name="type" value="Box">
+                        </form>
+
+                        <!-- FILTRE-POUR-BUREAU -->
+                        <p class="p_bur">Vos besoins mensuels</p>
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/box" id="filterFormDesktop" class="content_manager_form">
+                            <div class="filtre_bur">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Prix maximum</span>
+                                        <span class="max">20 €</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterPriceDesktop" name="price" min="1" max="100" value="20" style="background-size: 19.1919% 100%;">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="operator" name="operator" class="selec1"><option value="">Opérateurs</option><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="options" name="options[]" class="selec1" multiple="multiple"><option value="5">5G</option><option value="1">International</option><option value="2">Musique illimitée</option><option value="7">SFR Play</option><option value="8">SFR Sport</option><option value="3">Vidéo</option><option value="6">Wifi</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_lien box">
+                                    <span>3 offres réferencés</span>
+                                    <button class="comparer">Comparer</button>
+                                </div>
+                            </div>
+                            <div class="filtre_bur hidden" id="advancedResearchDesktop">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="filtre_bur">
+                                <div>
+                                    <a href="#" onclick="document.querySelector('#advancedResearchDesktop').classList.toggle('hidden'); return false;">
+                                        &gt;&gt;Recherche avancée
+                                    </a>
+                                </div>
+                            </div>
+                            <input type="hidden" id="type" name="type" value="Box">
+                        </form>
+
+
+                    </div>
+                </header>
+
+                <!-- BLOC-BANIERE -->
+                <div class="pubmob">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-box"> <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/0eeac86b65467253945a2add4e220c3f.jpeg" alt="image-pub"></a>
+                </div>
+                <div class="pub_desktop">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-box"> <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/51517ea513575cf30bd9c2a0b5b36476.jpeg" alt="image-pub"></a>
+                </div>
+
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Pack Box 2</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                4G
+                                0 mb/s
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/93d7c4a3ef56f13c98a0d052a592035a.png" title="5G">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>19<sup>,00</sup> €</strong>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Deuxieme Box</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                4G
+                                80 mb/s
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>0<sup>,00</sup> €</strong>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_forfait_mob">
+                        <div class="title_pres">
+                            <strong>Ma super Box</strong>
+                            <p>
+                                Sans engagement
+                            </p>
+                            <span>
+
+                            </span>
+                        </div>
+                        <div class="logo_pres">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                    </div>
+                    <div class="desc_forfait_mob">
+                        <div class="element_desc">
+                            <span>Appels</span>
+                            <strong>
+                                illimité
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Internet</span>
+                            <strong>
+                                4G
+                                100 mb/s
+
+                            </strong>
+                        </div>
+                        <div class="element_desc">
+                            <span>Options</span>
+                            <div class="icone_forfait_mob">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element_prix-mob">
+                        <div class="prix_desc">
+                            <span>Prix</span>
+                            <div class="month">
+                                <strong>7<sup>,00</sup> €</strong>
+                                <p>Par mois au lieu de 9,90 €</p>
+                            </div>
+                        </div>
+                        <a href="">Plus d'infos</a>
+                    </div>
+                </div>
+
+                <!-- FORFAIT-HOME-BUREAU -->
+                <div class="forfait_mobil_bur">
+                    <table>
+                        <tbody><tr>
+                            <td class="forf">
+                                <span>Forfaits</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=name_asc&amp;price=20&amp;type=Box">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=name_desc&amp;price=20&amp;type=Box">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Opérateur</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=operator_asc&amp;price=20&amp;type=Box">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=operator_desc&amp;price=20&amp;type=Box">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Appels</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=call_asc&amp;price=20&amp;type=Box">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=call_desc&amp;price=20&amp;type=Box">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="autr">
+                                <span>Internet</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=capacity_asc&amp;price=20&amp;type=Box">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=capacity_desc&amp;price=20&amp;type=Box">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="forf">
+                                <span>Options</span>
+                            </td>
+                            <td class="autr">
+                                <span>Prix</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=price_asc&amp;price=20&amp;type=Box">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/box?order=price_desc&amp;price=20&amp;type=Box">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="forf"><span>en savoir plus</span></td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Pack Box 2</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        4G
+                                        0 mb/s
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/bc331033171ee3885aaf03f429019757.png" title="Musique illimitée">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/93d7c4a3ef56f13c98a0d052a592035a.png" title="5G">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>19<sup>,00</sup> €</strong>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Deuxieme Box</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        4G
+                                        80 mb/s
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>0<sup>,00</sup> €</strong>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td>
+                                    <strong>Ma super Box</strong>
+                                    <br>
+                                    <p class="engag">
+                                        Sans engagement
+                                    </p>
+                                    <p class="promo">
+                                        PROMO
+                                    </p>
+                                </td>
+                                <td class="operateur">
+                                    <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                </td>
+                                <td>
+                                    <span>
+                                        illimité
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span>
+                                        4G
+                                        100 mb/s
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="icone_forfait_bur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/981e37bead15322f06400a8293cc10fd.png" title="International">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/c4058d0ed8a9524eb25430798e2630bf.png" title="Accès au catalogue des chaines TV du fournisseur">
+                                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/options/b2ef99dc4dafe73e63e7d40bbd6dcdaf.png" title="Wifi">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="month">
+                                        <strong>7<sup>,00</sup> €</strong>
+                                        <p>Par mois au lieu de 9,90 €</p>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="plus_home_forf">
+                                        <a href="">Plus d'infos</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody></table>
+
+                    <div class="pagination_bloc">
+                        <span>Page 1 / 1</span>
+                        <div class="pagination">
+                        </div>
+                    </div>
+
+
+                </div>
+                <script type="text/javascript">
+                    priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+                    priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');
+                    priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');
+
+                    priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+                    priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+                    priceDesktopRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');
+                </script>
+            </main>
+        </div>
+
+        <script type="text/javascript">
+            contentM = new ContentManager(
+                document.querySelector('#contentComparateur'),     //element dans lequel le contenu serra ajouté
+                'https://cdiscount-dvpt.kreatec.fr/comparator/box'
+            )
+        </script>
+
+        <script><br>        priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>        priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>        priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>        priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>        priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>        priceDesktopRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br>    </script>
+    </body>
+</html>

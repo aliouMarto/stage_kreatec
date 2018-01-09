@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BOX offre</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+       <div id="contentComparateur">
+        <main id="sub_part_comparator">
+            <header>
+                <h2 class="h2_mob">Comparateur d'abonnements internet Box, ADSL, Fibre</h2> <br>
+                <h2 class="h2_bur">Comparateur d'abonnements internet Box, ADSL, Fibre</h2> <br>
+                <div class="header_filtre">
+                    <!--          FILTRE-POUR-MOBILE-->
+                    <div class="filtre">
+                        <p class="pmob">Vos besoins mensuels</p>
+                        <br>
+                        <p class="prix_max">
+                            <span class="min_mob">Prix</span>
+                            <span class="max_mob">Maximum 15 €</span>
+                        </p>
+                        <input type="range" min="0" max="100" value="50" />
+                        <p  class="prix_max">
+                            <select name="operateur" class="selec">
+                                <option value="Opérateurs" selected>Opérateurs</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Cdiscount">Cdiscount</option>
+                                <option value="Free">Free</option>
+                            </select>
+                        </p>
+                        <p  class="prix_max">
+                            <select name="option" class="selec">
+                                <option value="Options" selected>Options souhaitées</option>
+                                <option value="Appels">Appels</option>
+                                <option value="SMS/MMS">SMS/MMS</option>
+                                <option value="Internet">Internet</option>
+                            </select>
+                        </p> <br> <br>
+                        <!--  LE-LIEN-FILTRE-DU-HEADER -->
+                        <div class="lien-filtre">
+                            <a class="recherche" href="">>>Recherche avancée</a>
+                            <br> <br>
+                            <button class="comparer">Comparer</button>
+                        </div>
+                    </div>
+                    <!-- FILTRE-POUR-BUREAU -->
+                    <p class="p_bur">Vos besoins mensuels</p>
+                    <div class="filtre_bur">
+                        <div class="filtre_bur_desc">
+                            <p class="mesure">
+                                <span class="min">Prix</span>
+                                <span class="max maxi">Maximum 15 €</span> <br>
+                            </p>
+                            <input type="range" min="0" max="100" value="50" />
+                        </div>
+                        <div class="filtre_bur_desc">
+                            <p class="mesure">
+                              <div class="selectBox" onclick="showCheckboxes()">
+                                <select name="option" class="selec2">
+                                    <option value="Opérateurs" selected>Options souhaitées</option>
+                                </select>
+                                 <div class="overSelect"></div>
+                            </div>
+                            <div id="checkboxes">
+                                <label for="one">
+                                    <input type="checkbox" id="one" />Option 1</label>
+                                <label for="two">
+                                    <input type="checkbox" id="two" />Option 2</label>
+                                <label for="three">
+                                    <input type="checkbox" id="three" />Option 3</label>
+                                     <label for="one">
+                                    <input type="checkbox" id="one" />Option 4</label>
+                            </div>      
+                            </p>
+                        </div>
+                        <div class="filtre_bur_desc">
+                            <p class="mesure">
+                           <select name="operateur" class="selec1">
+                                    <option value="Opérateurs" selected>Opérateurs</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Cdiscount">Cdiscount</option>
+                                    <option value="Free">Free</option>
+                                </select>
+                            </p>
+                    </div>
+                    <div class="filtre_bur_lien">
+                        <span>20 forfaits réferencés</span>
+                        <button class="comparer">Comparer</button>
+                    </div>
+                    <div class="lien-filtre">
+                        <a class="recherche" href="">>>Recherche avancée</a>
+                    </div>
+                </div>
+                </div>
+            </header>
+
+        <!-- FORFAIT-HOME -->
+
+        <div class="forfait_mob_home">
+            <div class="pres_forfait_mob">
+                <div class="title_pres">
+                    <strong>Forfait Power Fibre</strong>
+                    <p>12 mois</p>
+                    <span>PROMO</span>
+                </div>
+                <div class="logo_pres">
+                    <img src="img/cdisclogo.png">
+                </div>
+            </div>
+            <div class="desc_forfait_mob">
+                <div class="element_desc">
+                    <span>Appels</span>
+                    <strong>illimités</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Internet</span>
+                    <strong>FIBRE 100 mb/s</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Options</span>
+                    <div class="icone_forfait_mob">
+                        <img src="img/icone1.png">
+                        <img src="img/icone tv.png">
+                        <img src="img/icone musiq.png">
+                    </div>
+                </div>
+            </div>
+            <div class="element_prix-mob">
+                <div class="prix_desc">
+                    <span>Prix</span>
+                    <div class="month">
+                        <strong>9<sup>,00</sup> €</strong>
+                        <p>Par mois au lieu de 19.99 €</p>
+                    </div>
+                </div>
+                <a href="">Plus d'infos</a>
+            </div>
+        </div>
+
+        <!-- FORFAIT-HOME -->
+
+        <div class="forfait_mob_home">
+            <div class="pres_forfait_mob">
+                <div class="title_pres">
+                    <strong>Forfait Basic Fibre</strong>
+                    <p>Sans engagement</p>
+                    <span class="quali">QUANTITE LIMITEE</span>
+                </div>
+                <div class="logo_pres">
+                    <img src="img/nrjlogo.png">
+                </div>
+            </div>
+            <div class="desc_forfait_mob">
+                <div class="element_desc">
+                    <span>Appels</span>
+                    <strong>illimités</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Internet</span>
+                    <strong>FIBRE 100 mb/s</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Options</span>
+                    <div class="icone_forfait_mob">
+                        <img src="img/icone1.png">
+                        <img src="img/icone tv.png">
+                        <img src="img/icone musiq.png">
+                    </div>
+                </div>
+            </div>
+            <div class="element_prix-mob">
+                <div class="prix_desc">
+                    <span>Prix</span>
+                    <div class="month">
+                        <strong>10<sup>,99</sup> €</strong>
+                        <p>Par mois au lieu de 19.99 €</p>
+                    </div>
+                </div>
+                <a href="">Plus d'infos</a>
+            </div>
+        </div>
+        <!-- FORFAIT-HOME -->
+
+        <div class="forfait_mob_home">
+            <div class="pres_forfait_mob">
+                <div class="title_pres">
+                    <strong>Forfait Adsl +</strong>
+                    <p>Sans engagement</p>
+                </div>
+                <div class="logo_pres">
+                    <img src="img/nrjlogo.png">
+                </div>
+            </div>
+            <div class="desc_forfait_mob">
+                <div class="element_desc">
+                    <span>Appels</span>
+                    <strong>illimités</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Internet</span>
+                    <strong>FIBRE 100 mb/s</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Options</span>
+                    <div class="icone_forfait_mob">
+                        <img src="img/icone1.png">
+                        <img src="img/icone tv.png">
+                        <img src="img/icone musiq.png">
+                    </div>
+                </div>
+            </div>
+            <div class="element_prix-mob">
+                <div class="prix_desc">
+                    <span>Prix</span>
+                    <div class="month">
+                        <strong>14<sup>,99</sup> €</strong>
+                        <p>Par mois au lieu de 19.99 €</p>
+                    </div>
+                </div>
+                <a href="">Plus d'infos</a>
+            </div>
+        </div>
+        <!-- FORFAIT-HOME -->
+
+        <div class="forfait_mob_home">
+            <div class="pres_forfait_mob">
+                <div class="title_pres">
+                    <strong>Forfait Basic Fibre</strong>
+                    <p>Sans engagement</p>
+                    <span>PROMO</span>
+                </div>
+                <div class="logo_pres">
+                    <img src="img/lapostelogo.png">
+                </div>
+            </div>
+            <div class="desc_forfait_mob">
+                <div class="element_desc">
+                    <span>Appels</span>
+                    <strong>2H</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Internet</span>
+                    <strong>FIBRE 100 mb/s</strong>
+                </div>
+                <div class="element_desc">
+                    <span>Options</span>
+                    <div class="icone_forfait_mob">
+                        <img src="img/icone1.png">
+                        <img src="img/icone tv.png">
+                        <img src="img/icone musiq.png">
+                    </div>
+                </div>
+            </div>
+            <div class="element_prix-mob">
+                <div class="prix_desc">
+                    <span>Prix</span>
+                    <div class="month">
+                        <strong>9<sup>,00</sup> €</strong>
+                        <p>Par mois au lieu de 19.99 €</p>
+                    </div>
+                </div>
+                <a href="">Plus d'infos</a>
+            </div>
+        </div>
+
+        <!--            FORFAIT-HOME-BUREAU-->
+        <div class="forfait_mobil_bur">
+            <table>
+                <tr>
+                    <td class="forf">
+                        <span>Forfaits</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>  
+                    </td>
+                    <td class="autr">
+                        <span>Opérateur</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+                    </td>
+                    <td class="autr">
+                        <span>Appels</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+                    </td>
+                    <!--
+<td class="autr">
+<span>SMS/MMS</span>
+<a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+<a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+</td>
+-->
+                    <td class="autr">
+                        <span>Internet</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+                    </td>
+                    <td class="forf">
+                        <span>Options</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+                    </td>
+                    <td class="autr">
+                        <span>Prix</span>
+                        <a href=""><img class="sup" src="img/sup_icone.png" alt=""></a>
+                        <a href=""><img class="inf" src="img/inf_icone.png" alt=""></a>
+                    </td>
+                    <td class="forf"><span>en savoir plus</span></td>
+                </tr>
+
+                <!--                    UNE-LIGNE-->
+
+                <tr class="ligne_body">
+                    <td><strong>Forfait Power Fibre</strong> <br>
+                        <p class="engag">12 mois</p>
+                        <p class="promo">PROMO</p></td>
+                    <td class="operateur"><img src="img/redlogo.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>FIBRE 100 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <a href=""><img src="img/icone1.png"></a>
+                            <a href=""><img src="img/icone tv.png"></a>
+                            <a href=""><img src="img/icone musiq.png"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>10<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Basic Fibre</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                        <p class="quantite">QUANTITE LIMITEE</p></td>
+                    <td class="operateur"><img src="img/bouygues_nom.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>FIBRE 100 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <a href=""><img src="img/icone1.png"></a>
+                            <!--
+<a href=""><img src="img/icone tv.png"></a>
+<a href=""><img src="img/icone musiq.png"></a>
+-->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>9<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Power Fibre</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                    </td>
+                    <td class="operateur"><img src="img/forfait_byu.jpg"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>FIBRE 100 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <a href=""><img src="img/icone1.png"></a>
+                            <a href=""><img src="img/icone tv.png"></a>
+                            <a href=""><img src="img/icone musiq.png"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>14<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Adsl +</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                        <p class="excep">EXCEPTIONNEL</p>
+                    </td>
+                    <td class="operateur"><img src="img/cdisclogo.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>FIBRE 100 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <!--
+<a href=""><img src="img/icone1.png"></a>
+<a href=""><img src="img/icone tv.png"></a>
+-->
+                            <a href=""><img src="img/icone musiq.png"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>4<sup>,99</sup> €</strong> <br>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Power Fibre</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                    </td>
+                    <td class="operateur"><img src="img/lapostelogo.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>ADSL <br> 10 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <!--
+<a href=""><img src="img/icone1.png"></a>
+<a href=""><img src="img/icone tv.png"></a>
+<a href=""><img src="img/icone musiq.png"></a>
+-->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>12<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Adsl +</strong> <br>
+                        <p class="engag">12 moist</p>
+                        <p class="promo">PROMO</p></td>
+                    <td class="operateur"><img src="img/forfait_or.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>ADSL 20 <br> mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <!--
+<a href=""><img src="img/icone1.png"></a>
+<a href=""><img src="img/icone tv.png"></a>
+<a href=""><img src="img/icone musiq.png"></a>
+-->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>10<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Adsl +</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                        <p class="promo">PROMO</p>
+                    </td>
+                    <td class="operateur"><img src="img/forfait_byu.jpg"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>ADSL 10 <br> mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <a href=""><img src="img/icone1.png"></a>
+                            <a href=""><img src="img/icone tv.png"></a>
+                            <!--                                <a href=""><img src="img/icone musiq.png"></a>-->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>9<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait Carré Fibre</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                    </td>
+                    <td class="operateur"><img src="img/lapostelogo.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>FIBRE 100 mb/s</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <a href=""><img src="img/icone1.png"></a>
+                            <a href=""><img src="img/icone tv.png"></a>
+                            <a href=""><img src="img/icone musiq.png"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>15<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- UNE-LIGNE -->
+                <tr class="ligne_body">
+                    <td><strong>Forfait 4G</strong> <br>
+                        <p class="engag">Sans engagement</p>
+                    </td>
+                    <td class="operateur"><img src="img/redlogo.png"></td>
+                    <td><span>illimités</span></td>
+                    <!--                        <td><span>illimités</span></td>-->
+                    <td><span>4G <br> 50 Go</span></td>
+                    <td>
+                        <div class="icone_forfait_bur">
+                            <!--                                <a href=""><img src="img/icone1.png"></a>-->
+                            <a href=""><img src="img/icone tv.png"></a>
+                            <a href=""><img src="img/icone musiq.png"></a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="month">
+                            <strong>19<sup>,99</sup> €</strong>
+                            <p>Par mois au lieu de 19.99 €</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plus_home_box">
+                            <a href="">Plus d'info</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="pagination_bloc">
+                <span>Page 2 / 3</span>
+                <div class="pagination">
+                    <a class="prec" href="">Page précédente</a>
+                    <a class="suiv" href="">Page suivante</a>
+                </div>
+            </div> 
+        </div>
+        </main>
+        </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"> </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            $('input[type=range]').on('input', function(e){
+                var min = e.target.min,
+                    max = e.target.max,
+                    val = e.target.value;
+
+                $(e.target).css({
+                    'backgroundSize': (val - min) * 100 / (max - min) + '% 100%'
+                });
+            }).trigger('input');
+        });
+    </script>
+
+    <script>
+        var expanded = false;
+
+        function showCheckboxes() {
+            var checkboxes = document.getElementById("checkboxes");
+            if (!expanded) {
+                checkboxes.style.display = "block";
+                expanded = true;
+            } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+            }
+        }
+    </script>
+    </body>
+</html>

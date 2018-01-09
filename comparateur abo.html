@@ -1,0 +1,564 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo Comparateur de forfaits - ABONNEMENT (FORFAIT + TELEPHONE)</title>
+<!--        <link rel="stylesheet" href="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/styles/build/base.css">-->
+   <link rel="stylesheet" href="styles/style.css">
+    </head>
+
+    <body>
+<!--        <script src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/js/build/cdiscount_front.js"></script>-->
+
+        <div id="contentComparateur">
+            <main id="sub_part_comparator">
+                <header>
+                    <h2 class="h2_mob">Comparateur Forfaits mobiles</h2>
+                    <h2 class="h2_bur">Comparateur Forfaits mobiles</h2> <br>
+                    <div class="header_filtre">
+
+                        <!-- FILTRE-POUR-MOBILE -->
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/abo" id="filterFormMobile" class="filtre content_manager_form">
+                            <p class="pmob">Vos besoins mensuels</p>
+                            <br>
+                            <p class="prix_max">
+                                <span class="min_mob">Prix maximum</span>
+                                <span class="max_mob">20 €</span>
+                            </p>
+                            <input type="range" id="filterPriceMobile" name="price" min="1" max="1000" value="20" style="background-size: 1.9019% 100%;">
+                            <p class="prix_max">
+                                <select id="operator" name="operator[]" class="select" multiple="multiple"><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                            </p>
+                            <p class="prix_max">
+                                <select id="brand" name="brand[]" class="select" multiple="multiple"><option value="1">ACER</option><option value="2">ALCATEL</option><option value="3">ALCATEL ONE TOUCH</option><option value="23">APPLE</option><option value="4">ARCHOS</option><option value="5">ASUS</option><option value="43">AUCUNE</option><option value="19">BANZ</option><option value="8">BLACKBERRY</option><option value="44">BLACKPHONE</option><option value="7">BQ</option><option value="48">CASE LOGIC</option><option value="20">CATERPILLAR</option><option value="9">CROSSCALL</option><option value="10">DORO</option><option value="12">ECHO</option><option value="13">EMPORIA</option><option value="45">HAIER</option><option value="21">HISENSE</option><option value="17">HONOR</option><option value="16">HTC</option><option value="11">HUAWEI</option><option value="47">HYUNDAI</option><option value="18">ICE-PHONE</option><option value="22">INFINIX</option><option value="31">KAZAM</option><option value="46">KRUPS</option><option value="24">LG</option><option value="33">LOGIC</option><option value="25">LOGICOM</option><option value="37">MAPPY</option><option value="36">MEGABLEU</option><option value="27">MEIZU</option><option value="26">MICROSOFT</option><option value="28">MOTOROLA</option><option value="29">NOKIA</option><option value="35">PHILIPS</option><option value="34">POLAROID</option><option value="30">SAMSUNG</option><option value="15">SONY</option><option value="14">SONY ERICSSON</option><option value="38">TELEFUNKEN</option><option value="6">THOMSON</option><option value="39">UCALL</option><option value="32">WIKO</option><option value="42">XIAOMI</option><option value="40">ZTE</option><option value="41">ZUK</option></select>
+                            </p>
+                            <div class="hidden" id="advancedResearchMobile">
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                                <p class="prix_max">
+                                </p>
+                            </div>
+
+                            <br> <br>
+
+                            <!-- LE-LIEN-FILTRE-DU-HEADER -->
+                            <div class="lien-filtre">
+                                <button class="comparer">Comparer</button>
+                            </div>
+
+                        </form>
+
+                        <!-- FILTRE-POUR-BUREAU -->
+                        <p class="p_bur">Vos besoins mensuels</p>
+                        <form name="" method="get" action="https://cdiscount-dvpt.kreatec.fr/comparator/abo" id="filterFormDesktop" class="content_manager_form">
+                            <div class="filtre_bur">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <span class="min">Prix maximum</span>
+                                        <span class="max maxi">20 €</span>
+                                        <br>
+                                    </p>
+                                    <input type="range" id="filterPriceDesktop" name="price" min="1" max="1000" value="20" style="background-size: 1.9019% 100%;">
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="operator" name="operator[]" class="select1" multiple="multiple"><option value="3">Bouygues Télécom</option><option value="5">Canard Mobile</option><option value="10">Cdiscount Mobile</option><option value="9">Free</option><option value="8">La Poste mobile</option><option value="1">NRJ Mobile</option><option value="6">Orange</option><option value="7">Red</option><option value="2">SFR Mobile</option><option value="4">Sosh</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+                                        <select id="brand" name="brand[]" class="select2" multiple="multiple"><option value="1">ACER</option><option value="2">ALCATEL</option><option value="3">ALCATEL ONE TOUCH</option><option value="23">APPLE</option><option value="4">ARCHOS</option><option value="5">ASUS</option><option value="43">AUCUNE</option><option value="19">BANZ</option><option value="8">BLACKBERRY</option><option value="44">BLACKPHONE</option><option value="7">BQ</option><option value="48">CASE LOGIC</option><option value="20">CATERPILLAR</option><option value="9">CROSSCALL</option><option value="10">DORO</option><option value="12">ECHO</option><option value="13">EMPORIA</option><option value="45">HAIER</option><option value="21">HISENSE</option><option value="17">HONOR</option><option value="16">HTC</option><option value="11">HUAWEI</option><option value="47">HYUNDAI</option><option value="18">ICE-PHONE</option><option value="22">INFINIX</option><option value="31">KAZAM</option><option value="46">KRUPS</option><option value="24">LG</option><option value="33">LOGIC</option><option value="25">LOGICOM</option><option value="37">MAPPY</option><option value="36">MEGABLEU</option><option value="27">MEIZU</option><option value="26">MICROSOFT</option><option value="28">MOTOROLA</option><option value="29">NOKIA</option><option value="35">PHILIPS</option><option value="34">POLAROID</option><option value="30">SAMSUNG</option><option value="15">SONY</option><option value="14">SONY ERICSSON</option><option value="38">TELEFUNKEN</option><option value="6">THOMSON</option><option value="39">UCALL</option><option value="32">WIKO</option><option value="42">XIAOMI</option><option value="40">ZTE</option><option value="41">ZUK</option></select>
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_lien abo">
+                                    <span>4 forfaits réferencés</span>
+                                    <button class="comparer">Comparer</button>
+                                </div>
+                            </div>
+                            <div class="filtre_bur hidden" id="advancedResearchDesktop">
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+
+                                    </p>
+                                </div>
+                                <div class="filtre_bur_desc">
+                                    <p class="mesure">
+
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </header>
+
+                <!-- BLOC-BANIERE -->
+                <div class="pubmob">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-abo">
+                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/a51143f610131c1b5840b3cfbd43cad4.jpeg" alt="image-pub">
+                    </a>
+                </div>
+                <div class="pub_desktop">
+                    <a href="https://cdiscount-dvpt.kreatec.fr/demo/comparateur-abo">
+                        <img src="https://cdiscount-dvpt.kreatec.fr/uploads/trade/97c2755625fcb17df29491a8417c2466.jpeg" alt="image-pub">
+                    </a>
+                </div>
+
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_box_mob">
+                        <img src="https://s7.s-sfr.fr/mobile/uc/device/j49zt521/j5-2017-dos-50x70.png?ts=1498230647022" alt="">
+                        <p>Samsung Galaxy J5 Noir</p>
+                    </div>
+
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">1 €</p>
+                        <div class="lien">
+                            <a href="https://tracking.publicidees.com/clic.php?partid=52924&amp;progid=5334&amp;adfactory_type=12&amp;idfluxpi=1232&amp;url=https%3A%2F%2Fbouyguestelecomfr.solution.weborama.fr%2Ffcgi-bin%2Fdispatch.fcgi%3Fa.A%3Dcl%26a.si%3D1215%26a.te%3D20100%26a.ycp%3DPARTID+%7C+COMMISSION+%7C+THEMATIQUE%26a.ra%3D%5BRANDOM%5D%26g.lu%3Dhttps%3A%2F%2Fwww.bouyguestelecom.fr%2Ftelephones-mobiles%2Fsamsung-galaxy-j5-2017-noir-16-go%3Fxtor%3DAL50000-%5Btypeaff%5D%5BIDCOMISSION%5D-%5Bidaff%5D%5BNOMEDI%5D">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">279 €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=12516943021&amp;a=315619&amp;m=7320">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">9<sup>,99</sup> €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=10280662937&amp;a=315619&amp;m=7315">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box indisponible">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                        </div>
+                        <p>INDISPONIBLE</p>
+                        <div class="lien">
+                            <a href="lien-vers-page-operateur">Plus d'info</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_box_mob">
+                        <img src="https://s7.s-sfr.fr/mobile/uc/device/ip40tv43/j320-or_small4.png?ts=1469029751620" alt="">
+                        <p>Samsung Galaxy J3 Or</p>
+                    </div>
+
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">1 €</p>
+                        <div class="lien">
+                            <a href="https://dt.nrjmobile.fr/dynclick/nrjmobile/?eaf-publisher=CDiscount&amp;eaf-name=Flux_Cdiscount_new_beezup&amp;eaf-creative=dynamique&amp;eaf-creativetype=iab&amp;eurl= https://www.nrjmobile.fr/mobile/samsung/galaxy-j3-2016-or/6662?fichecleoffre=1653">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">159 €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=3654091109&amp;a=315619&amp;m=7320">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">9<sup>,99</sup> €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=4140897117&amp;a=315619&amp;m=7315">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box indisponible">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                        <p>INDISPONIBLE</p>
+                        <div class="lien">
+                            <a href="lien-vers-page-operateur">Plus d'info</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_box_mob">
+                        <img src="https://s7.s-sfr.fr/mobile/uc/device/iee6x1cl/iphone6splus-spgrey-small-2.png?ts=1469106447763" alt="">
+                        <p>LG K10 Noir</p>
+                    </div>
+
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">1 €</p>
+                        <div class="lien">
+                            <a href="https://dt.nrjmobile.fr/dynclick/nrjmobile/?eaf-publisher=CDiscount&amp;eaf-name=Flux_Cdiscount_new_beezup&amp;eaf-creative=dynamique&amp;eaf-creativetype=iab&amp;eurl= https://www.nrjmobile.fr/mobile/lg/k10-2017-noir/7537?fichecleoffre=1655">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">159 €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=3712367753&amp;a=315619&amp;m=7320">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">221<sup>,99</sup> €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=4140902559&amp;a=315619&amp;m=7315">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">849<sup>,90</sup> €</p>
+                        <div class="lien">
+                            <a href="https://tracking.publicidees.com/clic.php?partid=52924&amp;progid=5334&amp;adfactory_type=12&amp;idfluxpi=1232&amp;url=https%3A%2F%2Fbouyguestelecomfr.solution.weborama.fr%2Ffcgi-bin%2Fdispatch.fcgi%3Fa.A%3Dcl%26a.si%3D1215%26a.te%3D20100%26a.ycp%3DPARTID+%7C+COMMISSION+%7C+THEMATIQUE%26a.ra%3D%5BRANDOM%5D%26g.lu%3Dhttps%3A%2F%2Fwww.bouyguestelecom.fr%2Ftelephones-mobiles%2Fapple-iphone-6s-plus-gris-sideral-64-go%3Fxtor%3DAL50000-%5Btypeaff%5D%5BIDCOMISSION%5D-%5Bidaff%5D%5BNOMEDI%5D">Plus d'info</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- FORFAIT-HOME -->
+                <div class="forfait_mob_home">
+                    <div class="pres_box_mob">
+                        <img src="https://s7.s-sfr.fr/mobile/uc/00/83/92/95/iPhone5S_gld_small_front.png" alt="">
+                        <p>APPLE iPhone 5S 16 Go Or</p>
+                    </div>
+
+                    <div class="desc_box">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                        </div>
+                        <p>à partir de</p>
+                        <p class="prix">1 €</p>
+                        <div class="lien">
+                            <a href="https://www.awin1.com/pclick.php?p=4140905091&amp;a=315619&amp;m=7315">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box indisponible">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                        </div>
+                        <p>INDISPONIBLE</p>
+                        <div class="lien">
+                            <a href="lien-vers-page-operateur">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box indisponible">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                        </div>
+                        <p>INDISPONIBLE</p>
+                        <div class="lien">
+                            <a href="lien-vers-page-operateur">Plus d'info</a>
+                        </div>
+                    </div>
+                    <div class="desc_box indisponible">
+                        <div class="opera">
+                            <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                        </div>
+                        <p>INDISPONIBLE</p>
+                        <div class="lien">
+                            <a href="lien-vers-page-operateur">Plus d'info</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORFAIT-HOME-BUREAU -->
+                <div class="forfait_mob_bur">
+                    <table>
+                        <tbody><tr>
+                            <td class="autr">
+                                <span>Mobile</span>
+                            </td>
+                            <td class="forf">
+                                <span>Modèle</span>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/abo?order=modele_asc&amp;price=20">
+                                    <img class="sup" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/sup_icone.png" alt="">
+                                </a>
+                                <a class="content_manager_link" href="https://cdiscount-dvpt.kreatec.fr/comparator/abo?order=modele_desc&amp;price=20">
+                                    <img class="inf" src="https://cdiscount-dvpt.kreatec.fr/bundles/app/front/img/inf_icone.png" alt="">
+                                </a>
+                            </td>
+                            <td class="offr">
+                                <span>Les meilleures offres</span>
+                            </td>
+                            </tr>
+
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td><img class="smart" src="https://s7.s-sfr.fr/mobile/uc/device/j49zt521/j5-2017-dos-50x70.png?ts=1498230647022" alt=""></td>
+                                <td>
+                                    <img class="logo" src="https://cdiscount-dvpt.kreatec.fr/uploads/brand/" alt="">
+                                    <p class="logo_text">Samsung Galaxy J5 Noir</p>
+                                </td>
+                                <td class="ligne_offre">
+                                    <div class="ligne_desc">
+
+
+                                        <a href="https://tracking.publicidees.com/clic.php?partid=52924&amp;progid=5334&amp;adfactory_type=12&amp;idfluxpi=1232&amp;url=https%3A%2F%2Fbouyguestelecomfr.solution.weborama.fr%2Ffcgi-bin%2Fdispatch.fcgi%3Fa.A%3Dcl%26a.si%3D1215%26a.te%3D20100%26a.ycp%3DPARTID+%7C+COMMISSION+%7C+THEMATIQUE%26a.ra%3D%5BRANDOM%5D%26g.lu%3Dhttps%3A%2F%2Fwww.bouyguestelecom.fr%2Ftelephones-mobiles%2Fsamsung-galaxy-j5-2017-noir-16-go%3Fxtor%3DAL50000-%5Btypeaff%5D%5BIDCOMISSION%5D-%5Bidaff%5D%5BNOMEDI%5D">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                                <p>A partir de</p>
+                                                <span>1 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=12516943021&amp;a=315619&amp;m=7320">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                                                <p>A partir de</p>
+                                                <span>279 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=10280662937&amp;a=315619&amp;m=7315">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                                                <p>A partir de</p>
+                                                <span>9<sup>,99</sup> €</span>
+                                            </div>
+                                        </a>
+
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="lien-vers-page-operateur">
+                                            <div class="best_offre_deb">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                                                <p>INDISPONIBLE</p>
+                                            </div>
+                                        </a>                                             
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td><img class="smart" src="https://s7.s-sfr.fr/mobile/uc/device/ip40tv43/j320-or_small4.png?ts=1469029751620" alt=""></td>
+                                <td>
+                                    <img class="logo" src="https://cdiscount-dvpt.kreatec.fr/uploads/brand/" alt="">
+                                    <p class="logo_text">Samsung Galaxy J3 Or</p>
+                                </td>
+                                <td class="ligne_offre">
+                                    <div class="ligne_desc">
+
+
+                                        <a href="https://dt.nrjmobile.fr/dynclick/nrjmobile/?eaf-publisher=CDiscount&amp;eaf-name=Flux_Cdiscount_new_beezup&amp;eaf-creative=dynamique&amp;eaf-creativetype=iab&amp;eurl= https://www.nrjmobile.fr/mobile/samsung/galaxy-j3-2016-or/6662?fichecleoffre=1653">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                                                <p>A partir de</p>
+                                                <span>1 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=3654091109&amp;a=315619&amp;m=7320">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                                                <p>A partir de</p>
+                                                <span>159 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=4140897117&amp;a=315619&amp;m=7315">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                                                <p>A partir de</p>
+                                                <span>9<sup>,99</sup> €</span>
+                                            </div>
+                                        </a>
+
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="lien-vers-page-operateur">
+                                            <div class="best_offre_deb">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                                <p>INDISPONIBLE</p>
+                                            </div>
+                                        </a>                                             
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td><img class="smart" src="https://s7.s-sfr.fr/mobile/uc/device/iee6x1cl/iphone6splus-spgrey-small-2.png?ts=1469106447763" alt=""></td>
+                                <td>
+                                    <img class="logo" src="https://cdiscount-dvpt.kreatec.fr/uploads/brand/" alt="">
+                                    <p class="logo_text">LG K10 Noir</p>
+                                </td>
+                                <td class="ligne_offre">
+                                    <div class="ligne_desc">
+
+
+                                        <a href="https://dt.nrjmobile.fr/dynclick/nrjmobile/?eaf-publisher=CDiscount&amp;eaf-name=Flux_Cdiscount_new_beezup&amp;eaf-creative=dynamique&amp;eaf-creativetype=iab&amp;eurl= https://www.nrjmobile.fr/mobile/lg/k10-2017-noir/7537?fichecleoffre=1655">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                                                <p>A partir de</p>
+                                                <span>1 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=3712367753&amp;a=315619&amp;m=7320">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                                                <p>A partir de</p>
+                                                <span>159 €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://www.awin1.com/pclick.php?p=4140902559&amp;a=315619&amp;m=7315">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                                                <p>A partir de</p>
+                                                <span>221<sup>,99</sup> €</span>
+                                            </div>
+                                        </a>
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="https://tracking.publicidees.com/clic.php?partid=52924&amp;progid=5334&amp;adfactory_type=12&amp;idfluxpi=1232&amp;url=https%3A%2F%2Fbouyguestelecomfr.solution.weborama.fr%2Ffcgi-bin%2Fdispatch.fcgi%3Fa.A%3Dcl%26a.si%3D1215%26a.te%3D20100%26a.ycp%3DPARTID+%7C+COMMISSION+%7C+THEMATIQUE%26a.ra%3D%5BRANDOM%5D%26g.lu%3Dhttps%3A%2F%2Fwww.bouyguestelecom.fr%2Ftelephones-mobiles%2Fapple-iphone-6s-plus-gris-sideral-64-go%3Fxtor%3DAL50000-%5Btypeaff%5D%5BIDCOMISSION%5D-%5Bidaff%5D%5BNOMEDI%5D">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                                <p>A partir de</p>
+                                                <span>849<sup>,90</sup> €</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- UNE-LIGNE -->
+                            <tr class="ligne_body">
+                                <td><img class="smart" src="https://s7.s-sfr.fr/mobile/uc/00/83/92/95/iPhone5S_gld_small_front.png" alt=""></td>
+                                <td>
+                                    <img class="logo" src="https://cdiscount-dvpt.kreatec.fr/uploads/brand/" alt="">
+                                    <p class="logo_text">APPLE iPhone 5S 16 Go Or</p>
+                                </td>
+                                <td class="ligne_offre">
+                                    <div class="ligne_desc">
+
+
+                                        <a href="https://www.awin1.com/pclick.php?p=4140905091&amp;a=315619&amp;m=7315">
+                                            <div class="best_offre">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/717132200f2222e936cbfe22b8bcc1d9.jpeg" alt="SFR Mobile">
+                                                <p>A partir de</p>
+                                                <span>1 €</span>
+                                            </div>
+                                        </a>
+
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="lien-vers-page-operateur">
+                                            <div class="best_offre_deb">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/e5c5257ca1e5d2a72acf8cf5fd36f078.png" alt="NRJ Mobile">
+                                                <p>INDISPONIBLE</p>
+                                            </div>
+                                        </a>                                             
+
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="lien-vers-page-operateur">
+                                            <div class="best_offre_deb">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/eaab56f48551adb10fb365dcfe65aa63.jpeg" alt="Bouygues Télécom">
+                                                <p>INDISPONIBLE</p>
+                                            </div>
+                                        </a>                                             
+
+                                        <div class="bordure">
+                                            <strong></strong>
+                                        </div>
+                                        <a href="lien-vers-page-operateur">
+                                            <div class="best_offre_deb">
+                                                <img src="https://cdiscount-dvpt.kreatec.fr/uploads/operator/57205a9bbd9021c7a6cdbb0df9fa59ff.png" alt="Sosh">
+                                                <p>INDISPONIBLE</p>
+                                            </div>
+                                        </a>                                             
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+
+                    <div class="pagination_bloc">
+                        <span>Page 1 / 1</span>
+                        <div class="pagination">
+                        </div>
+                    </div>
+
+
+                </div>
+                <script type="text/javascript">
+                    priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');
+                    priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');
+                    priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');
+
+                    priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');
+                    priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');
+                    priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');
+                </script>
+            </main>
+
+        </div>
+
+        <script type="text/javascript">
+            contentM = new ContentManager(
+                document.querySelector('#contentComparateur'),     //element dans lequel le contenu serra ajouté
+                'https://cdiscount-dvpt.kreatec.fr/comparator/abo'
+            )
+        </script>
+
+        <script><br>        priceDesktopRange = document.querySelector('#sub_part_comparator #filterPriceDesktop');<br>        priceDesktopLabel = priceDesktopRange.parentNode.querySelector('.max');<br>        priceDesktopRange.autoRange = new InputRange(priceDesktopRange, priceDesktopLabel, '€');<br><br>        priceMobileRange = document.querySelector('#sub_part_comparator #filterPriceMobile');<br>        priceMobileLabel = priceMobileRange.previousElementSibling.querySelector('.max_mob');<br>        priceMobileRange.autoRange = new InputRange(priceMobileRange, priceMobileLabel, '€');<br>    </script>
+    </body>
+</html>
